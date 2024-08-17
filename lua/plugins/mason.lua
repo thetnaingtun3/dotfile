@@ -20,6 +20,10 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
+  {
+    "williamboman/mason.nvim",
+    opts = { ensure_installed = { "gomodifytags", "impl" } },
+  },
   config = function()
     -- import mason
     local mason = require("mason")
@@ -48,6 +52,8 @@ return {
         "cssls",
         "tailwindcss",
         "svelte",
+        "vue",
+        "go",
         "lua_ls",
         "graphql",
         "emmet_ls",

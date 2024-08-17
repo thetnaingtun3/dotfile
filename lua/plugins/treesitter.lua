@@ -31,6 +31,7 @@ return {
         "css",
         "prisma",
         "markdown",
+        "vue",
         "markdown_inline",
         "svelte",
         "graphql",
@@ -42,6 +43,7 @@ return {
         "query",
         "vimdoc",
         "c",
+        "go",
       },
       incremental_selection = {
         enable = true,
@@ -55,4 +57,3 @@ return {
     })
   end,
 }
-
