@@ -43,7 +43,7 @@ return {
         "query",
         "vimdoc",
         "c",
-        "go",
+        "go", "gomod", "gowork", "gosum"
       },
       incremental_selection = {
         enable = true,
