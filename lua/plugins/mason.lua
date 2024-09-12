@@ -1,28 +1,45 @@
--- mason dependencies
-
--- return {
---   {
---     "williamboman/mason.nvim",
---     opts = {
---       ensure_installed = {
---         "lua-language-server",
---         "shellcheck",
---         "shfmt",
---         "php-debug-adapter",
---         "intelephense",
---       },
---     },
---   },
--- }
 return {
   "williamboman/mason.nvim",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
-  {
-    "williamboman/mason.nvim",
-    opts = { ensure_installed = { "gomodifytags", "impl", "gopls" } },
+  opts = {
+    ensure_installed = {
+      -- Existing tools and language servers
+      "gomodifytags",
+      "impl",
+      "gopls",
+
+      -- New tools and language servers
+      "actionlint",
+      "ansible-language-server",
+      "ansible-lint",
+      "antlers-language-server",
+      "black",
+      "bash-language-server",
+      "blade-formatter",
+      "docker-compose-language-service",
+      "dockerfile-language-server",
+      "dot-language-server",
+      "emmet-ls",
+      "eslint_d",
+      "flake8",
+      "hadolint",
+      "html-lsp",
+      "intelephense",
+      "nginx-language-server",
+      "php-debug-adapter",
+      "phpstan",
+      "pint",
+      "prettierd",
+      "pyright",
+      "rustywind",
+      "shellcheck",
+      "shfmt",
+      "stylua",
+      "tailwindcss-language-server",
+    },
   },
   config = function()
     -- import mason
@@ -79,3 +96,4 @@ return {
     })
   end,
 }
+
