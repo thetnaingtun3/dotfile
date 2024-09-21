@@ -43,7 +43,11 @@ return {
       "query",
       "vimdoc",
       "c",
+<<<<<<< Updated upstream
+     "go", "gomod", "gowork", "gosum"
+=======
       "go", "gomod", "gowork", "gosum"
+>>>>>>> Stashed changes
     },
     auto_install = true,
     highlight = {

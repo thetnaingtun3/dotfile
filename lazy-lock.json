@@ -61,7 +61,7 @@
   },
   "dressing.nvim": {
     "branch": "master",
-    "commit": "c5775a888adbc50652cb370073fcfec963eca93e"
+    "commit": "1b7921eecc65af1baf8ac1dc06f0794934cbcfb2"
   },
   "flash.nvim": {
     "branch": "main",
@@ -77,7 +77,7 @@
   },
   "grug-far.nvim": {
     "branch": "main",
-    "commit": "76d86580f71bd2f07d4264c782ab8d1c12302e13"
+    "commit": "308e357be687197605cf19222f843fbb331f50f5"
   },
   "indent-blankline.nvim": {
     "branch": "master",
@@ -193,7 +193,7 @@
   },
   "nvim-treesitter": {
     "branch": "master",
-    "commit": "4af16a10b7f1e79275f712a1c6dcf725d301a303"
+    "commit": "929ca9c76ee20bb27cffbde4ee90583b6c54d616"
   },
   "nvim-treesitter-textobjects": {
     "branch": "master",
