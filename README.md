@@ -1,4 +1,4 @@
-# 💤 LazyVim + Laravel
+# 💤 LazyVim + Laravel + GO
 
 (and some stuff I also use)
 This is my best effort to fully integrate my LazyVim config with Laravel and all Laravel-related tools.
