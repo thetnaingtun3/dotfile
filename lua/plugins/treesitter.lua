@@ -43,7 +43,7 @@ return {
       "query",
       "vimdoc",
       "c",
-      "go", "gomod", "gowork", "gosum"
+     "go", "gomod", "gowork", "gosum"
     },
     auto_install = true,
     highlight = {

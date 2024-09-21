@@ -6,8 +6,8 @@ return {
     local opts = {
       default_format_opts = {
         timeout_ms = 3000,
-        async = false, -- not recommended to change
-        quiet = false, -- not recommended to change
+        async = false,           -- not recommended to change
+        quiet = false,           -- not recommended to change
         lsp_format = "fallback", -- not recommended to change
       },
       formatters_by_ft = {
@@ -18,6 +18,7 @@ return {
         blade = { "blade-formatter", "rustywind" },
         python = { "black" },
         javascript = { "prettierd" },
+        go = { "goimports", "gofumpt" },
         -- rust = { "rustfmt" },
       },
       -- LazyVim will merge the options you set here with builtin formatters.
@@ -39,7 +40,8 @@ return {
         pint = {
           meta = {
             url = "https://github.com/laravel/pint",
-            description = "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
+            description =
+            "Laravel Pint is an opinionated PHP code style fixer for minimalists. Pint is built on top of PHP-CS-Fixer and makes it simple to ensure that your code style stays clean and consistent.",
           },
           command = util.find_executable({
             vim.fn.stdpath("data") .. "/mason/bin/pint",
