@@ -3,8 +3,9 @@ return {
   {
 
     -- "ful1e5/onedark.nvim",
-    -- "olimorris/onedarkpro.nvim",
+    "olimorris/onedarkpro.nvim",
     "navarasu/onedark.nvim",
+ "neanias/everforest-nvim",
   },
 
   -- Configure LazyVim to load onedark
@@ -12,11 +13,10 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "onedark",
+
+      -- colorscheme = "everforest",
+
     },
   },
 }
 
--- -- Lazy
--- {
---   priority = 1000, -- Ensure it loads first
--- }

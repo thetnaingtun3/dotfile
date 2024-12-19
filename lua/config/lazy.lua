@@ -7,6 +7,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -18,23 +19,24 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.tex" },
     { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+  { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
- {
-        'mg979/vim-visual-multi',
-        -- See https://github.com/mg979/vim-visual-multi/issues/241
-        init = function()
-            vim.g.VM_default_mappings = 0
-            vim.g.VM_maps = {
-                ['Find Under'] = ''
-            }
-            vim.g.VM_add_cursor_at_pos_no_mappings = 1
-        end,
+    
+   {
+      'mg979/vim-visual-multi',
+      -- See https://github.com/mg979/vim-visual-multi/issues/241
+      init = function()
+        vim.g.VM_default_mappings = 0
+        vim.g.VM_maps = {
+          ['Find Under'] = ''
+        }
+        vim.g.VM_add_cursor_at_pos_no_mappings = 1
+      end,
     },
     { import = "plugins" },
 
@@ -48,7 +50,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
