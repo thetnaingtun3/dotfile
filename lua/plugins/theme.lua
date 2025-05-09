@@ -5,7 +5,7 @@ return {
     -- "ful1e5/onedark.nvim",
     "olimorris/onedarkpro.nvim",
     "navarasu/onedark.nvim",
- "neanias/everforest-nvim",
+    "neanias/everforest-nvim",
   },
 
   -- Configure LazyVim to load onedark
@@ -15,8 +15,6 @@ return {
       colorscheme = "onedark",
 
       -- colorscheme = "everforest",
-
     },
   },
 }
-

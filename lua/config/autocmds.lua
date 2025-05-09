@@ -32,7 +32,6 @@
 --   end,
 -- })
 
-
 -- -- make $ part of the keyword for php.
 -- vim.api.nvim_exec(
 --   [[
