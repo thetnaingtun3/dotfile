@@ -23,11 +23,19 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-  { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
+    { "ms-jpq/coq_nvim",                                    branch = "coq" },
+
+    -- 9000+ Snippets
+    { "ms-jpq/coq.artifacts",                               branch = "artifacts" },
+
+    -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+    -- Need to **configure separately**
+    { 'ms-jpq/coq.thirdparty',                              branch = "3p" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
-    
-   {
+
+    {
       'mg979/vim-visual-multi',
       -- See https://github.com/mg979/vim-visual-multi/issues/241
       init = function()
