@@ -23,11 +23,29 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.ai.copilot" },
+    { "ms-jpq/coq_nvim",                                    branch = "coq" },
+
+    -- 9000+ Snippets
+    { "ms-jpq/coq.artifacts",                               branch = "artifacts" },
+
+    -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
+    -- Need to **configure separately**
+    { 'ms-jpq/coq.thirdparty',                              branch = "3p" },
+    {
+      "ricardoramirezr/blade-nav.nvim",
+      dependencies = { "hrsh7th/nvim-cmp" },
+      ft = { "blade", "php" },
+      config = function()
+        require("blade-nav").setup({
+          -- your config options
+        })
+      end,
+    },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
 
     {
-      "mg979/vim-visual-multi",
+      'mg979/vim-visual-multi',
       -- See https://github.com/mg979/vim-visual-multi/issues/241
       init = function()
         vim.g.VM_default_mappings = 0
@@ -50,8 +68,7 @@ require("lazy").setup({
   },
   -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
-  performance = {
-    rtp = {
+  performance = { rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
