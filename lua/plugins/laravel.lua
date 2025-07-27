@@ -1,18 +1,31 @@
 return {
-  "adibhanna/laravel.nvim",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "nvim-lua/plenary.nvim",
+  {
+    'adibhanna/laravel.nvim',
+    -- dir = "~/Developer/opensource/laravel.nvim",
+    ft = { 'php', 'blade' },
+    dependencies = {
+      'folke/snacks.nvim', -- Optional: for enhanced UI
+    },
+    config = function()
+      require('laravel').setup({
+        notifications = false,
+        debug = false,
+        keymaps = true
+      })
+    end,
   },
-  cmd = { "Artisan", "Composer", "Laravel*" },
-  keys = {
-    { "<leader>la", ":Artisan<cr>",      desc = "Laravel Artisan" },
-    { "<leader>lc", ":Composer<cr>",     desc = "Composer" },
-    { "<leader>lr", ":LaravelRoute<cr>", desc = "Laravel Routes" },
-    { "<leader>lm", ":LaravelMake<cr>",  desc = "Laravel Make" },
+
+  {
+    -- dir = "~/Developer/opensource/phprefactoring.nvim",
+    'adibhanna/phprefactoring.nvim',
+    enabled = false,
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+    },
+    ft = 'php',
+    config = function()
+      require('phprefactoring').setup()
+    end,
   },
-  event = { "VeryLazy" },
-  config = function()
-    require("laravel").setup()
-  end,
+
 }

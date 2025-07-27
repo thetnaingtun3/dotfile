@@ -32,6 +32,16 @@ require("lazy").setup({
     -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     -- Need to **configure separately**
     { 'ms-jpq/coq.thirdparty',                              branch = "3p" },
+    {
+      "ricardoramirezr/blade-nav.nvim",
+      dependencies = { "hrsh7th/nvim-cmp" },
+      ft = { "blade", "php" },
+      config = function()
+        require("blade-nav").setup({
+          -- your config options
+        })
+      end,
+    },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
 
@@ -60,8 +70,7 @@ require("lazy").setup({
   },
   -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
-  performance = {
-    rtp = {
+  performance = { rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
