@@ -10,7 +10,7 @@ return {
       "gomodifytags",
       "impl",
       "gopls",
-
+      "python",
       -- New tools and language servers
       "actionlint",
       "ansible-language-server",
@@ -39,6 +39,8 @@ return {
       "shfmt",
       "stylua",
       "tailwindcss-language-server",
+      "markdownlint-cli2",
+      "markdown-toc",
     },
   },
   config = function()
@@ -61,38 +63,38 @@ return {
       },
     })
 
-    -- mason_lspconfig.setup({
-    --   -- list of servers for mason to install
-    --   ensure_installed = {
-    --     "tsserver",
-    --     "html",
-    --     "cssls",
-    --     -- "tailwindcss",
-    --     "svelte",
-    --     "vue",
-    --     "go",
-    --     "lua_ls",
-    --     "graphql",
-    --     "emmet_ls",
-    --     "prismals",
-    --     "pyright",
-    --     "lua-language-server",
-    --     "shellcheck",
-    --     "shfmt",
-    --     "php-debug-adapter",
-    --     "intelephense",
-    --   },
-    -- })
+    mason_lspconfig.setup({
+      -- list of servers for mason to install
+      ensure_installed = {
+        "tsserver",
+        "html",
+        "cssls",
+        "tailwindcss",
+        "svelte",
+        "vue",
+        "go",
+        "lua_ls",
+        "graphql",
+        "emmet_ls",
+        "prismals",
+        "pyright",
+        "lua-language-server",
+        "shellcheck",
+        "shfmt",
+        "php-debug-adapter",
+        "intelephense",
+      },
+    })
 
-    -- mason_tool_installer.setup({
-    --   ensure_installed = {
-    --     "prettier", -- prettier formatter
-    --     "stylua",   -- lua formatter
-    --     "isort",    -- python formatter
-    --     "black",    -- python formatter
-    --     "pylint",
-    --     "eslint_d",
-    --   },
-    -- })
+    mason_tool_installer.setup({
+      ensure_installed = {
+        -- "prettier", -- prettier formatter
+        -- "stylua",   -- lua formatter
+        -- "isort",    -- python formatter
+        "black", -- python formatter
+        -- "pylint",
+        -- "eslint_d",
+      },
+    })
   end,
 }
