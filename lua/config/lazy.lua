@@ -7,11 +7,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim",                                    import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
@@ -23,23 +22,22 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-  { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
-    
-   {
-      'mg979/vim-visual-multi',
+
+    {
+      "mg979/vim-visual-multi",
       -- See https://github.com/mg979/vim-visual-multi/issues/241
       init = function()
         vim.g.VM_default_mappings = 0
         vim.g.VM_maps = {
-          ['Find Under'] = ''
+          ["Find Under"] = "",
         }
         vim.g.VM_add_cursor_at_pos_no_mappings = 1
       end,
     },
     { import = "plugins" },
-
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
