@@ -23,6 +23,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.ai.copilot" },
+<<<<<<< HEAD
+=======
     { "ms-jpq/coq_nvim",                                    branch = "coq" },
 
     -- 9000+ Snippets
@@ -41,11 +43,16 @@ require("lazy").setup({
         })
       end,
     },
+>>>>>>> d6278d8662675044f21acb0faec1e59ba65b9e08
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
 
     {
+<<<<<<< HEAD
+      "mg979/vim-visual-multi",
+=======
       'mg979/vim-visual-multi',
+>>>>>>> d6278d8662675044f21acb0faec1e59ba65b9e08
       -- See https://github.com/mg979/vim-visual-multi/issues/241
       init = function()
         vim.g.VM_default_mappings = 0
